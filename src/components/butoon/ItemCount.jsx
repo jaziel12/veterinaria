@@ -14,7 +14,7 @@ const [qty, setQty] = useState(initial);
 };
 
     return (
-    <div className="bg-orange-500 flex	flex-col justify-center	items-center		">
+    <div className=" flex	flex-col justify-center	items-center		">
         <div className="bg-green-500  grid w-36	h-18 font-semibold	text-base border-4	border-red-800 ">
         <button
             className="bg-pink-900  text-blue-50	w-full	h-full	"
