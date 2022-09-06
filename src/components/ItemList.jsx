@@ -1,37 +1,10 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import { Productos } from "./Productos/";
-const ItemList= () =>{
-    const [Productos, setProductos] = useState([]);
-    //Promesa
-    const getProductos= new Promise((resolve, reject) =>{
-        setTimeout(() =>{
-            if(true){
-                resolve(Productos);
+import Item from "./Item.jsx";
 
-            } else{
-                reject("La promesa no fue complida")
-            }
-        }, 2000);
-    });
-
-    useEffect(()=>{
-        getProductos
-            .then(data=> setProductos(data))
-            .catch(error=>console.error(error));
-    },[]);
-
+const ItemList= ({data=[]})=>{
     return(
-        <div className="">
-
-            {Productos.length > 0
-                ?Productos.map(Productos=> <Item key={Productos.id}  Productos={Productos} /> )
-                : <p>Cargando productos ¡Prueba!</p>
-            }
-
-        </div>
+        data.map(cache=> <Item key={cache.id} info={cache}/>)
+        
     )
 }
-
 export default ItemList;

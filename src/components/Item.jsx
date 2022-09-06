@@ -1,20 +1,20 @@
 import React from "react";
 import ItemCount from "./butoon/ItemCount";
 
-const Item=({Productos}) =>{
-    const onAdd=(qty) => {
-        alert('Agregaste ${qty} productos')
-    };
+
+const Item=({info}) =>{
+
     return(
-            <div className="">
-                    <h3>{Productos.nombre}</h3>
-                    <p>{Productos.image} </p> 
-                    <ItemCount />
-
-
-
-
-            </div>
+        <div ClassName="flex flex-row	">
+            <a href="">
+                <p>{info.nombre}</p>
+                <img  className="w-40 h-30" src={info.image}/>
+                <p>{info.tit}</p>
+                
+            </a>
+            <ItemCount  initial={1} stock={8}/>
+            
+        </div>
 
 
 
