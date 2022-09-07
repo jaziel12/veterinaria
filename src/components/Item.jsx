@@ -6,13 +6,14 @@ const Item=({info}) =>{
 
     return(
         <div ClassName="flex flex-row	">
-            <a href="">
-                <p>{info.nombre}</p>
+            <div>
+                <p className="bg-slate-300">{info.nombre}</p>
                 <img  className="w-40 h-30" src={info.image}/>
-                <p>{info.tit}</p>
-                
-            </a>
+                <p className="bg-slate-300 " 	>{info.tit}</p>
             <ItemCount  initial={1} stock={8}/>
+                
+            </div>
+
             
         </div>
 

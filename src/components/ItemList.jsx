@@ -3,7 +3,9 @@ import Item from "./Item.jsx";
 
 const ItemList= ({data=[]})=>{
     return(
-        data.map(cache=> <Item key={cache.id} info={cache}/>)
+        <div className="grid grid-cols-6 gap-3 ">
+            {data.map(cache=> <Item key={cache.id} info={cache}/>) }
+        </div>
         
     )
 }
