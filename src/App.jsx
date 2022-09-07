@@ -1,13 +1,12 @@
 import React from 'react';
-import ItemCount from './components/butoon/ItemCount';
 import ItemListContainer from './components/ItemListContainer';
-import NavBar from './components/menu/NavBar';
+import NavBar from './components/NavBar';
 
 function App() {
 
-  const onAdd = (qty) => {
+/*  const onAdd = (qty) => {
     alert(`Agregaste ${qty} productos`);
-  };
+  }; */
 
   return (
     <div className="App">

@@ -1,8 +1,12 @@
 import React from "react";
-import ItemCount from "./butoon/ItemCount";
+import ItemCount from "./ItemCount";
 
 
 const Item=({info}) =>{
+
+    const onAdd = (qty) => {
+        alert(`Agregaste ${qty} productos`);
+    };
 
     return(
         <div ClassName="flex flex-row	">
@@ -10,7 +14,8 @@ const Item=({info}) =>{
                 <p className="bg-slate-300">{info.nombre}</p>
                 <img  className="w-40 h-30" src={info.image}/>
                 <p className="bg-slate-300 " 	>{info.tit}</p>
-            <ItemCount  initial={1} stock={8}/>
+            <ItemCount onAdd={onAdd} initial={1} stock={8}/>
+            
                 
             </div>
 

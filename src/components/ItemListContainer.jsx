@@ -76,9 +76,8 @@ useEffect(() =>{
 
     return (
         <section className="flex flex-col items-center bg-gray-900">
-
-        <div className=" text-center">
-            <h1 className=" bg-slate-500 " >{title}</h1>
+            <h1 className=" bg-slate-500 w-full text-center" >{title}</h1>
+            <div className=" text-center">
             <ItemList data={data}/>
         </div>
         </section>
