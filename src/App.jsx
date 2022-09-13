@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
@@ -14,10 +15,9 @@ function App() {
         <NavBar />
         <ItemListContainer title="La Granja"/>
         <ItemDetailContainer/>
-        
 
     </div>
   )
 }
 
-export default App
+export default App;
