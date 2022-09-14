@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 const ItemCount = ({ onAdd, initial, stock }) => {
         const [qty, setQty] = useState(initial);
+        
 
         const addProduct = (num) => {
         setQty(qty + num);

@@ -2,22 +2,29 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import ItemList from "./ItemList";
 import ProductosArray from "./ProductosArray";
+import { useParams } from "react-router-dom";
 
 
 export const ItemListContainer =({title})=>{
 
 const [item,setItem] = useState([]);
 
+const {CategoriaId}= useParams()
+
 
 useEffect(() =>{
     const getProductos = new Promise(resolve=>{
         setTimeout(()=>{
             resolve(ProductosArray)
-        }, 2000);
+        }, 2000);   
     })
+    if(CategoriaId){
+        getProductos.then(data=> setItem(data.filter(Perros=>Perros.category === CategoriaId)));
+    } else {
+        getProductos.then(data=> setItem(data));
 
-    getProductos.then(data=> setItem(data));
-}, [])
+    }
+}, [CategoriaId])
 
 
 

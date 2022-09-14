@@ -3,6 +3,9 @@ import React from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import Footer from './components/Footer';
+import ItemDetail from './components/ItemDetail';
 
 function App() {
 
@@ -11,12 +14,16 @@ function App() {
   }; */
 
   return (
-    <div className="App">
-        <NavBar />
-        <ItemListContainer title="La Granja"/>
-        <ItemDetailContainer/>
-
-    </div>
+      <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route exact path='/' element={<ItemListContainer/>} />
+        <Route exact path='/Categoria/:CategoriaId' element={<ItemListContainer/>} />
+        <Route exact path='/Detalle' element={<ItemDetailContainer/>} />
+        <Route exact path='/Detalle/:id' element={<ItemDetail/>} />
+      </Routes> 
+      <Footer/>
+      </BrowserRouter>
   )
 }
 

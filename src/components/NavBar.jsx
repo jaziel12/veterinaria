@@ -1,30 +1,31 @@
 import React from "react";
 import logo from '../images/logo.png'
 import CardWitget from "./CardWitget";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return(
             <header className="text-base  bg-purple-500 flex justify-between	p-1.5" >
                 <div>
-                    <a href=""><img className="h-10" src={logo} alt="" /></a>
+                    <NavLink to={"/"}><img className="h-10" src={logo} alt="" /></NavLink>
                 </div>
                 <nav>
                     <ul className="flex gap-5 p-1.5">
                         <li>
-                            <a href="/">Inicio</a>
+                            <NavLink to={"/"}>Inicio</NavLink>
                         </li>
                         <li>
-                            <a href="/">Mascotas</a>
+                            <NavLink to={'/Categoria/Perros'}>Perros</NavLink>
                         </li>
                         <li>
-                            <a href="/">Alimentos</a>
+                            <NavLink to={'/Categoria/Gatos'}>Gatos</NavLink>
+                        </li>
+                        {/*<li>
+                            <NavLink to={"/Productos"}>Servicio</NavLink>
                         </li>
                         <li>
-                            <a href="/">Servicio</a>
-                        </li>
-                        <li>
-                            <a href="/">Contacto</a>
-                        </li>
+                            <NavLink to={"/Productos"}>Contacto</NavLink>
+                        </li> */}
                     </ul>
                 </nav>
                 <CardWitget/>
