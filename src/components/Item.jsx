@@ -13,7 +13,7 @@ const Item=({item}) =>{
     return(
         <div className="flex flex-row	">
             <div>
-                    <Link to={"/Detalle/${item:id}"}>
+                    <Link to={`/Detalle/${item.id}`}>
                         <p className="bg-slate-300">{item?.nombre}</p>
                     </Link>
                         <img  className="w-40 h-30" src={item?.image}/>

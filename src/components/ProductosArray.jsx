@@ -30,9 +30,9 @@ export const ProductosArray = [
     {
         id:4,
         tit:"$15.000",
-        nombre:"Pro Plan Adulto 15kg",
+        nombre:"Excellent Gatito",
         stock:10,
-        image:"https://puppis.vteximg.com.br/arquivos/ids/179607-600-600/7891000246382-1.jpg?v=637570859637630000",
+        image:"https://cdn.shopify.com/s/files/1/0550/6252/8170/products/RenderFRENTEEXCELLENTKITTEN_f1348474-34a3-434c-b4e8-01d15a3ac994_500x.jpg?v=1660310728",
         category:"Gatos",
 
     },
@@ -40,18 +40,18 @@ export const ProductosArray = [
     {
         id:5,
         tit:"$10.000",
-        nombre:"Pedigree Pollo 15kg",
+        nombre:"Pro Plan Gato Castrado",
         stock:10,
-        image:"https://puppis.vteximg.com.br/arquivos/ids/182154-1000-1000/135045.jpg?v=637650377496400000",
+        image:"https://cdn.shopify.com/s/files/1/0550/6252/8170/products/PurinaProPlanGatoSterilized_2ef51eca-88fc-4f4d-a403-7dbbc8754343_500x.png?v=1658586442",
         category:"Gatos",
 
     },
     {
         id:6,
         tit:"$12.700",
-        nombre:"Pouch Optimum 15kg",
+        nombre:"Royal Canin Gato",
         stock:10,
-        image:"https://puppis.vteximg.com.br/arquivos/ids/174415-1000-1000/154004-1.jpg?v=637443858666270000",
+        image:"https://cdn.shopify.com/s/files/1/0550/6252/8170/products/royal-canin-cat-digest-sensitive-pouch-85gr_dcc3762e-9bbb-499b-b1b6-e9a74cb7bd34_400x.jpg?v=1658168643",
         category:"Gatos",
     },
 ]

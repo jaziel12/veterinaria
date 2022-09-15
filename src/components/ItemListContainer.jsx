@@ -19,7 +19,7 @@ useEffect(() =>{
         }, 2000);   
     })
     if(CategoriaId){
-        getProductos.then(data=> setItem(data.filter(Perros=>Perros.category === CategoriaId)));
+        getProductos.then(data=> setItem(data.filter(ProductosArray=>ProductosArray.category === CategoriaId)));
     } else {
         getProductos.then(data=> setItem(data));
 
