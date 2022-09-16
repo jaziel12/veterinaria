@@ -32,7 +32,7 @@ export const ProductosArray = [
         tit:"$15.000",
         nombre:"Excellent Gatito",
         stock:10,
-        image:"https://cdn.shopify.com/s/files/1/0550/6252/8170/products/RenderFRENTEEXCELLENTKITTEN_f1348474-34a3-434c-b4e8-01d15a3ac994_500x.jpg?v=1660310728",
+        image:"https://puppis.vteximg.com.br/arquivos/ids/179663-600-600/7613039946886_1.png?v=637570859858170000",
         category:"Gatos",
 
     },
@@ -42,7 +42,7 @@ export const ProductosArray = [
         tit:"$10.000",
         nombre:"Pro Plan Gato Castrado",
         stock:10,
-        image:"https://cdn.shopify.com/s/files/1/0550/6252/8170/products/PurinaProPlanGatoSterilized_2ef51eca-88fc-4f4d-a403-7dbbc8754343_500x.png?v=1658586442",
+        image:"https://cdn.shopify.com/s/files/1/0550/6252/8170/products/alimento-exact-gato-adulto_500x.jpg?v=1658247438",
         category:"Gatos",
 
     },
@@ -51,7 +51,7 @@ export const ProductosArray = [
         tit:"$12.700",
         nombre:"Royal Canin Gato",
         stock:10,
-        image:"https://cdn.shopify.com/s/files/1/0550/6252/8170/products/royal-canin-cat-digest-sensitive-pouch-85gr_dcc3762e-9bbb-499b-b1b6-e9a74cb7bd34_400x.jpg?v=1658168643",
+        image:"https://puppis.vteximg.com.br/arquivos/ids/166102-1000-1000/121056.png?v=636881832779930000",
         category:"Gatos",
     },
 ]
