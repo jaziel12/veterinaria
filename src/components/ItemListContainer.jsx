@@ -9,7 +9,7 @@ export const ItemListContainer =({title})=>{
 
 const [item,setItem] = useState([]);
 
-const {CategoriaId}= useParams()
+const {categoriaId}= useParams()
 
 
 useEffect(() =>{
@@ -18,13 +18,13 @@ useEffect(() =>{
             resolve(ProductosArray)
         }, 2000);   
     })
-    if(CategoriaId){
-        getProductos.then(data=> setItem(data.filter(ProductosArray=>ProductosArray.category === CategoriaId)));
+    if(categoriaId){
+        getProductos.then(data=> setItem(data.filter(ProductosArray=>ProductosArray.category === categoriaId)));
     } else {
         getProductos.then(data=> setItem(data));
 
     }
-}, [CategoriaId])
+}, [categoriaId])
 
 
 

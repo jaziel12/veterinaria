@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
@@ -18,8 +17,8 @@ function App() {
       <NavBar/>
       <Routes>
         <Route exact path='/' element={<ItemListContainer/>} />
-        <Route exact path='/Categoria/:CategoriaId' element={<ItemListContainer/>} />
-        <Route exact path='/Detalle/:id' element={<ItemDetailContainer/>} />
+        <Route exact path='/categoria/:categoriaId' element={<ItemListContainer/>} />
+        <Route exact path='/detalle/:id' element={<ItemDetailContainer/>} />
       </Routes> 
       <Footer/>
       </BrowserRouter>
