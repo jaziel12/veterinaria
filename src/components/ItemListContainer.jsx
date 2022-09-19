@@ -3,13 +3,18 @@ import { useEffect } from "react";
 import ItemList from "./ItemList";
 import ProductosArray from "./ProductosArray";
 import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
 
 export const ItemListContainer =({title})=>{
 
 const [item,setItem] = useState([]);
 
-const {categoriaId}= useParams()
+/* const valores = useContext(CartContext); //
+console.log(valores) */
+
+const {categoriaId}= useParams();
 
 
 useEffect(() =>{
