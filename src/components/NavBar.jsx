@@ -1,7 +1,7 @@
 import React from "react";
 import logo from '../images/logo.png'
 import CardWitget from "./CardWitget";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return(
@@ -28,7 +28,9 @@ const NavBar = () => {
                         </li> */}
                     </ul>
                 </nav>
+                <Link to={"/cart"}>
                 <CardWitget/>
+                </Link>
 
             </header>
     )

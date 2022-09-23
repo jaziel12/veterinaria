@@ -6,6 +6,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Footer from './components/Footer';
 import ItemDetail from './components/ItemDetail';
 import CartProvider from './components/CartContext';
+import Cart from './components/Cart';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Route exact path='/' element={<ItemListContainer/>} />
         <Route exact path='/categoria/:categoriaId' element={<ItemListContainer/>} />
         <Route exact path='/detalle/:id' element={<ItemDetailContainer/>} />
+        <Route exact path='/cart' element={<Cart/>} />
       </Routes> 
       <Footer/>
       </BrowserRouter>

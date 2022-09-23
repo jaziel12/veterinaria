@@ -11,12 +11,12 @@ const Item=({item}) =>{
     }; */
 
     return(
-        <div className="flex flex-row	">
+        <div className="flex flex-ro	hover:scale-110 ">
             <div>
                     <Link to={`/detalle/${item.id}`}>
-                        <p className="bg-slate-300">{item?.nombre}</p>
+                        <p className="bg-slate-300 ">{item?.nombre}</p>
                     </Link>
-                        <img  className="w-40 h-30" src={item?.image}/>
+                        <img  className="w-40 h-30 " src={item?.image}/>
                         <p className="bg-slate-300 " 	>{item?.tit}</p>
                         {/*<ItemCount onAdd={onAdd} initial={1} stock={8}/> */}
             </div>

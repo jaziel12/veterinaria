@@ -26,6 +26,10 @@ const CartProvider = (props) =>{
     }
     console.log("carrito ", cart)
 
+    const totalPrice = () =>{ return cart.reduce((prev, act)=>prev+act.qty*act.tit,0)};
+
+    const totalProduct= () => cart.reduce((acumulador, productoActual)=>acumulador + productoActual.qty,0)
+
     const clearCart = () => setCart([]);
 
     const isInCart = (id) =>cart.find(ProductosArray => ProductosArray.id === id) ? true: false;
@@ -39,7 +43,7 @@ const CartProvider = (props) =>{
 //cart, addToCart eso va dentro del value
 
         return (
-            <CartContext.Provider value={{clearCart,isInCart,removeProduct, addProduct}}>
+            <CartContext.Provider value={{clearCart,isInCart,removeProduct, addProduct, totalPrice, totalProduct, cart}}>
                 {props.children}
             </CartContext.Provider>
         )

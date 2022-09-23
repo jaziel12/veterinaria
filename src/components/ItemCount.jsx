@@ -12,7 +12,7 @@ const ItemCount = ({ onAdd, initial, stock }) => {
 
     return (
     <div className=" flex	flex-col justify-center	items-center		">
-        <div className="flex flex-row  bg-green-500  w-18	h-18 font-semibold	text-base border-4	border-red-800 ">
+        <div className="flex flex-row  bg-green-500  w-18	h-18 font-semibold	text-base border-4 	border-red-800  rounded-lg">
             <button
                 className="bg-pink-900  text-blue-50	w-6	h-full	"
                 onClick={() => addProduct(-1)}
@@ -21,9 +21,9 @@ const ItemCount = ({ onAdd, initial, stock }) => {
             >
             -
             </button>
-            <span className="bg-white	w-6		text-center	h-full">{qty}</span>
+            <span className="bg-white	w-6	text-center	h-full">{qty}</span>
             <button
-                className="bg-indigo-500 text-blue-50	w-6		h-full	"
+                className="bg-indigo-500 text-blue-50 w-6	h-full	"
                 onClick={() => addProduct(+1)}
                 disabled={qty === stock}
             >
@@ -32,7 +32,7 @@ const ItemCount = ({ onAdd, initial, stock }) => {
         </div>
 
             <button
-                className="bg-purple-900  border-4	border-red-800	"
+                className="bg-slate-800	 px-2 rounded-full border-2	border-red-800 hover:bg-slate-400	 text-white	"
                 onClick={() => {
                     onAdd(qty);
                 }}
