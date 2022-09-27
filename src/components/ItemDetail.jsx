@@ -36,3 +36,6 @@ export const ItemDetail = ({item})=>{
     )
 }
 export default ItemDetail;
+
+/* {cart ? <Link className="text-blue-500" to={"/cart"}>Terminar Compra</Link> : <ItemCount onAdd={onAdd} initial={1} stock={8}/>} iba en la línea 32
+ */

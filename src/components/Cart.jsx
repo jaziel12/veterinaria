@@ -5,7 +5,7 @@ import CartItem from "./CartItem";
 
 
 const Cart = () =>{
-    const {cart,totalPrice} = useCartContext();
+    const {cart,totalPrice,clearCart} = useCartContext();
 //Ver si tengo que poner el "0" como string
     if(cart.length === 0){
         return(
@@ -23,6 +23,7 @@ const Cart = () =>{
         {
             <p>Total: {totalPrice()} </p>
         }
+        {        <button onClick={()=>clearCart()}>Eliminar Carrito</button>}
         </>
     )
 }

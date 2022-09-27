@@ -26,7 +26,7 @@ const CartProvider = (props) =>{
     }
     console.log("carrito ", cart)
 
-    const totalPrice = () =>{ return cart.reduce((prev, act)=>prev+act.qty*act.tit,0)};
+    const totalPrice = () =>{ return cart.reduce((prev, act)=>prev + act.qty * act.tit, 0)};
 
     const totalProduct= () => cart.reduce((acumulador, productoActual)=>acumulador + productoActual.qty,0)
 
