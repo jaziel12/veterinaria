@@ -10,20 +10,49 @@ const Cart = () =>{
     if(cart.length === 0){
         return(
             <>
-                <p>NO hay elementos en el Carrito</p>
-                <Link to={"/"}>Hacer compras</Link>
+                <p className="text-center">No hay elementos en el Carrito</p>
+                <Link to={"/"}> <p className="text-center" >Hacer compras</p> </Link>
             </>
         )
     }
+    //acá  estilar el Total, Checkout y Eliminar Todo
     return(
         <>
+        {
+                    <section>
+                    <table className="p-2 table-fixed w-full border border-slate-600 uppercase border-separate border-spacing-3">
+                    <thead>
+                        <tr>
+                        <th>productos</th>
+                        <th>precio</th>
+                        <th>cantidad</th>
+                        <th>total</th>
+                        <th></th>
+                        </tr>
+                    </thead>
+                    </table>
+                    </section>
+        }
         {
             cart.map(item =><CartItem key={item.id} item={item} />)
         }
         {
-            <p>Total: {totalPrice()} </p>
+    <table className="p-2 table-fixed w-full border border-slate-600 uppercase border-separate border-spacing-3">
+        <thead>
+            <tr>
+            <th><button className=""  onClick={()=>clearCart()}> <p> Eliminar Todo</p> </button></th>
+            <th><p className="text-center ">Total: {totalPrice()} </p></th>
+            <th><Link to={"/checkout"}>  <p className="text-center ">Confirmar compra</p> </Link></th>
+            <th></th>
+            </tr>
+        </thead>
+    </table>
         }
-        {        <button onClick={()=>clearCart()}>Eliminar Carrito</button>}
+{/*         {
+            <p className="text-center ">Total: {totalPrice()} </p>
+        }
+        { <Link to={"/checkout"}>  <p className="text-center ">Confirmar compra</p> </Link> }
+        {        <button className=""  onClick={()=>clearCart()}> <p> Eliminar Todo</p> </button>} */}
         </>
     )
 }

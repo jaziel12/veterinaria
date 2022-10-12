@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import ItemList from "./ItemList";
 import { db } from "./firebaseConfig";
-/* import ProductosArray from "./ProductosArray";
- */import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { collection, getDocs, query, where } from 'firebase/firestore';
@@ -45,12 +44,15 @@ useEffect(() =>{
 
 
     return (
+        <main className="h-min-main pb-6">
+
         <section className="flex flex-col items-center bg-gray-900">
             <h1 className=" bg-slate-500 w-full text-center" >{title}</h1>
             <div className=" text-center">
             <ItemList item={item}/>
         </div>
         </section>
+        </main>
     )
 }
 
