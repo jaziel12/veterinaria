@@ -30,7 +30,7 @@ const Form = ({ handleId }) => {
     const handleTelefono = (e) => setTelefono(e.target.value);
 
     return (
-        <form action="" onSubmit={handleSubmit}>
+        <form  action="" onSubmit={handleSubmit}>
             <input
                 type="text"
                 name="nombre"

@@ -10,19 +10,21 @@ export const useCartContext = () =>useContext(CartContext)
 const CartProvider = (props) =>{
     const [cart,setCart] = useState([])
 
-/*     const addToCart = (item, qty) =>{
- *//*         console.log("producto: ",item)
-        console.log("cantidad: ",qty) */
-/*         const product=({...item,qty});
-        setCart([...cart,product]);
-    }; */
-/*     console.log(cart)
- */    //
-
-    const addProduct = (item, newQty) =>{
-        const newCart = cart.filter (ProductosArray => ProductosArray.id !== item.id);
-        newCart.push({...item, qty:newQty});
-        setCart(newCart)
+    const addProduct = (item, qty) =>{
+        const newItem =  {...item, qty};
+        if(cart.some(item => item.id == newItem.id)){
+            console.warn('rl producto ya esta agregado');
+            const newCart = cart.map( item => {
+                if(item.id == newItem.id){
+                    item.qty = item.qty + newItem.qty;
+                }
+                return item;
+            });
+            setCart(newCart);
+        }else{
+            setCart([...cart, newItem])
+        }
+    
     }
     console.log("carrito ", cart)
 

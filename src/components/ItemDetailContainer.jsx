@@ -24,7 +24,7 @@ const ItemDetailContainer =() => {
     }, [id])
 
     return(
-        <div>
+        <div className="h-min-main pb-6">
             <ItemDetail item={item}/>
         </div>
     )

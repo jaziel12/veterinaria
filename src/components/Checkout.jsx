@@ -12,16 +12,19 @@ const Checkout = () => {
     if (orderId) {
         return (
             //No m deja estilar
-            <h1 className='bg-red'>
+            <main className="h-min-main pb-6">
+
+            <h1 className=' '>
                 Gracias por comprar en <strong>La Granja</strong>, te dejamos el número de seguimiento:{' '}
                 {orderId}
             </h1>
+            </main>
         );
     }
 
     return (
-        <div>
-            <Form handleId={handleId} />
+        <div className='h-min-main pb-6 bg-red'>
+            <Form  handleId={handleId} />
         </div>
     );
 };

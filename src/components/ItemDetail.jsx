@@ -23,6 +23,7 @@ export const ItemDetail = ({item})=>{
     /* alert(`Agregaste ${qty} productos`); */
     }; 
     return( //acá stilar la card detalle
+    <main className="h-min-main pb-6">
         <div className="flex ">
         <img className="w-1/4 " src={item?.image} alt="" /> 
         <div className="text-center mt-40 flex flex-col">
@@ -32,6 +33,7 @@ export const ItemDetail = ({item})=>{
         {cart ? <Link className="text-blue-500" to={"/cart"}>Terminar Compra</Link> : <ItemCount onAdd={onAdd} initial={1} stock={8}/>}
         </div>  
     </div>
+    </main>
         
     )
 }
