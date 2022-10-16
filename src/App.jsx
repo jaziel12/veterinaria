@@ -4,16 +4,13 @@ import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Footer from './components/Footer';
-import ItemDetail from './components/ItemDetail';
 import CartProvider from './components/CartContext';
 import Cart from './components/Cart';
-import Checkout from './components/checkout';
+//import Checkout from './components/checkout';
+import CheckoutPage from './components/page/CheckoutPage';
 
 function App() {
 
-/*  const onAdd = (qty) => {
-    alert(`Agregaste ${qty} productos`);
-  }; */
 
   return (
     <CartProvider>
@@ -25,7 +22,7 @@ function App() {
         <Route exact path='/categoria/:categoriaId' element={<ItemListContainer/>} />
         <Route exact path='/detalle/:id' element={<ItemDetailContainer/>} />
         <Route exact path='/cart' element={<Cart/>} />
-        <Route exact path='/checkout' element={<Checkout/>} />
+        <Route exact path='/checkoutpage' element={<CheckoutPage/>} />
       </Routes> 
       <Footer/>
       </BrowserRouter>

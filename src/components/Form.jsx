@@ -30,24 +30,27 @@ const Form = ({ handleId }) => {
     const handleTelefono = (e) => setTelefono(e.target.value);
 
     return (
-        <form  action="" onSubmit={handleSubmit}>
-            <input
+
+        <form  className='flex flex-col p-4 border border-slate-600' action="" onSubmit={handleSubmit}>
+            <input className='p-4 m-2'
                 type="text"
                 name="nombre"
                 placeholder="Nombre Completo"
                 value={nombre}
                 onChange={handleNombre}
                 required
-            />
+                />
             <input
+            className='p-4 m-2'
                 type="number"
                 name="telefono"
                 placeholder="Telefono"
                 value={telefono}
                 onChange={handleTelefono}
-            />
-            <button>Enviar</button>
+                />
+            <button className='p-4 m-2 hover:bg-slate-400 bg-white'>Enviar</button>
         </form>
+
     );
 };
 

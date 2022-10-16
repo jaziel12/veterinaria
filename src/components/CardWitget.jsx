@@ -7,9 +7,9 @@ const CardWitget = () => {
     const {totalProduct} = useCartContext();
 
     return (
-        <div className="cartidget">
+        <div className="flex ">
             <div><BsFillCartCheckFill size="40px" color="orange"/></div>
-            <span>{totalProduct() || '' }</span>
+            <span className="p-2 font-semibold text-lg">{totalProduct() || '' }</span>
         </div>
     );
 };

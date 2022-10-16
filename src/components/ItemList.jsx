@@ -5,7 +5,7 @@ const ItemList= ({item=[]})=>{
 
     
     return(
-        <div className="grid grid-cols-6 gap-3 ">
+        <div className="grid grid-cols-3 gap-6 p-4 ">
             {item.map(item=> <Item key={item.id} item={item}/>) }
         </div>
         

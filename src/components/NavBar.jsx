@@ -10,7 +10,7 @@ const NavBar = () => {
                     <NavLink to={"/"}><img className="h-10" src={logo} alt="" /></NavLink>
                 </div>
                 <nav>
-                    <ul className="flex gap-5 p-1.5">
+                    <ul className="flex gap-5 p-1.5 font-semibold">
                         <li>
                             <NavLink to={"/"}>Inicio</NavLink>
                         </li>
@@ -20,12 +20,7 @@ const NavBar = () => {
                         <li>
                             <NavLink to={'/Categoria/Gatos'}>Gatos</NavLink>
                         </li>
-                        {/*<li>
-                            <NavLink to={"/Productos"}>Servicio</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to={"/Productos"}>Contacto</NavLink>
-                        </li> */}
+                        
                     </ul>
                 </nav>
                 <Link to={"/cart"}>
