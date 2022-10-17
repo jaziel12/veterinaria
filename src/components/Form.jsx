@@ -8,7 +8,7 @@ import { db } from './firebaseConfig';
 const Form = ({ handleId }) => {
     const [nombre, setNombre] = useState('');
     const [telefono, setTelefono] = useState('');
-    const { totalPrice, cart } = useContext(CartContext);
+    const { totalPrice, cart, clearCart} = useContext(CartContext);
     const total = totalPrice();
 
     const handleSubmit = (e) => {
@@ -48,7 +48,7 @@ const Form = ({ handleId }) => {
                 value={telefono}
                 onChange={handleTelefono}
                 />
-            <button className='p-4 m-2 hover:bg-slate-400 bg-white'>Enviar</button>
+            <button className='p-4 m-2 hover:bg-slate-400 bg-white ' onClick={()=>clearCart()}>Enviar</button>
         </form>
 
     );
