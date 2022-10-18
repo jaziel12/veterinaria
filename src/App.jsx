@@ -6,7 +6,6 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Footer from './components/Footer';
 import CartProvider from './components/CartContext';
 import Cart from './components/Cart';
-//import Checkout from './components/checkout';
 import CheckoutPage from './components/page/CheckoutPage';
 
 function App() {

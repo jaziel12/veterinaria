@@ -3,7 +3,6 @@ import { BsFillCartCheckFill } from "react-icons/bs";
 import { CartContext, useCartContext } from "./CartContext";
 
 const CardWitget = () => {
- /*    const {} = useContext(CartContext);  *///ver clase 1:10
     const {totalProduct} = useCartContext();
 
     return (
